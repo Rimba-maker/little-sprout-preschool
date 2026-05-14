@@ -1,0 +1,34 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Little Sprout Preschool — Preschool & TK Reggio Emilia Montessori Jakarta',
+  description = 'Preschool & TK dengan kurikulum Reggio Emilia + Montessori. Anak 2-6 tahun. Bilingual ID-EN, ECCD certified teachers, akreditasi A. Jakarta, BSD, Surabaya.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content="Little Sprout Preschool" />
+    <meta property="og:description" content="Where Little Minds Grow Curious. Preschool & TK Bilingual, Reggio Emilia + Montessori." />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
