@@ -1,0 +1,43 @@
+---
+import Icon from '../ui/Icon.astro';
+import { photo } from '../../data/photos';
+import { trust } from '../../data/content';
+
+const p1 = photo('hero-garden');
+const p2 = photo('hero-tower');
+const p3 = photo('hero-blocks');
+const p4 = photo('hero-smile');
+---
+<section class="board hero" data-board="indigo" id="top" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <blockquote class="note hero__note">
+          “Kenapa daun ini basah padahal nggak hujan?”
+          <cite>Mika, 4 tahun · contoh catatan dokumentasi guru</cite>
+        </blockquote>
+        <h1 id="hero-title">Setiap Anak Berhak Tumbuh Dengan Rasa Ingin Tahu.</h1>
+        <p class="hero__sub">Preschool &amp; TK dengan kurikulum Reggio Emilia + Montessori. Untuk anak usia 2–6 tahun di Jakarta, BSD, dan Surabaya.</p>
+        <div class="hero__actions">
+          <a class="btn btn-primary" href="#booking">Schedule Campus Tour <Icon name="arrow" /></a>
+          <a class="btn btn-ghost" href="#program">Lihat Program</a>
+        </div>
+      </div>
+
+      <div class="hero__wall">
+        <figure class="print p1" data-pin><img src={p1.src} alt={p1.alt} width="1200" height="800" loading="eager" fetchpriority="high" /></figure>
+        <figure class="print p2" data-pin><img src={p2.src} alt={p2.alt} width="900" height="1200" loading="eager" /></figure>
+        <figure class="print p3" data-pin><img src={p3.src} alt={p3.alt} width="1000" height="667" loading="eager" /></figure>
+        <figure class="print p4" data-pin><img src={p4.src} alt={p4.alt} width="900" height="1200" loading="eager" /></figure>
+        <svg class="hero__thread" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path pathLength="1" d="M33 4.5 Q 58 -5 83 0.5" /><path pathLength="1" d="M29 60.5 Q 52 53 75 61.5" /><path pathLength="1" d="M83 0.5 Q 99 22 94 42 T 75 61.5" />
+        </svg>
+      </div>
+    </div>
+
+    <ul class="trust" aria-label="Bukti kepercayaan">
+      {trust.map((t) => <li><span class="strip strip--light">{t}</span></li>)}
+    </ul>
+    <p class="trust__note">Angka dan akreditasi di atas adalah contoh. Sekolah menggantinya dengan data resmi.</p>
+  </div>
+</section>

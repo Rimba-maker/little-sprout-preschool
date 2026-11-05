@@ -1,0 +1,22 @@
+---
+/** One consistent stroke icon set, authored here. 24px grid, 2px stroke. */
+type IconName = 'arrow' | 'check' | 'cross' | 'plus' | 'menu' | 'close' | 'left' | 'right' | 'instagram' | 'youtube' | 'whatsapp';
+
+interface Props { name: IconName; class?: string }
+const { name, class: className } = Astro.props;
+
+const paths: Record<IconName, string> = {
+  arrow: 'M5 12h14M13 6l6 6-6 6',
+  check: 'M5 12.5l4.5 4.5L19 7.5',
+  cross: 'M6 6l12 12M18 6L6 18',
+  plus: 'M12 5v14M5 12h14',
+  menu: 'M4 7h16M4 12h16M4 17h16',
+  close: 'M6 6l12 12M18 6L6 18',
+  left: 'M15 5l-7 7 7 7',
+  right: 'M9 5l7 7-7 7',
+  instagram: 'M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4zM12 8a4 4 0 100 8 4 4 0 000-8zM17.2 6.8h.01',
+  youtube: 'M3 8.5A3 3 0 016 5.5h12a3 3 0 013 3v7a3 3 0 01-3 3H6a3 3 0 01-3-3v-7zM10 9.5v5l4.5-2.5L10 9.5z',
+  whatsapp: 'M4 20l1.2-4.2A8 8 0 1112 20a8 8 0 01-3.8-1L4 20zM9 9c0 3 3 6 6 6l1-1.5-2-1-1 .7c-.8-.4-1.6-1.2-2-2l.7-1-1-2L9 9z',
+};
+---
+<svg class:list={['icon', className]} viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d={paths[name]} /></svg>

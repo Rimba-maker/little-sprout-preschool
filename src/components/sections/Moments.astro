@@ -1,0 +1,23 @@
+---
+import { photo } from '../../data/photos';
+import { moments } from '../../data/content';
+---
+<section class="board moments" data-board="indigo" id="momen" aria-labelledby="mom-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="mom-title">Dinding Momen</h2>
+      <p>Potongan hari-hari kecil yang kami dokumentasikan untuk orangtua. Geser untuk melihat lebih banyak.</p>
+    </div>
+  </div>
+  <div class="moments__rail" tabindex="0" role="group" aria-label="Galeri momen, geser ke samping">
+    {moments.map((m, i) => {
+      const ph = photo(m.photo);
+      return (
+        <figure class="print" data-tape data-reveal style={`--i:${i % 4}`}>
+          <img src={ph.src} alt={ph.alt} width="900" height="1125" loading="lazy" />
+          <figcaption>{m.caption}</figcaption>
+        </figure>
+      );
+    })}
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+import Faq from '../islands/Faq';
+import { faqs } from '../../data/content';
+---
+<section class="board" data-board="teal" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="faq-title">FAQ Orangtua</h2>
+    </div>
+    <div class="faq__layout">
+      <Faq client:visible items={faqs} />
+      <aside class="note faq__aside" data-reveal>
+        <h3>Masih ada pertanyaan?</h3>
+        <p>Tim admission menjawab lewat WhatsApp dalam 1 hari kerja. Atau datang langsung dan tanya sendiri.</p>
+        <a class="btn btn-ink" href="#booking">Book Campus Tour</a>
+      </aside>
+    </div>
+  </div>
+</section>

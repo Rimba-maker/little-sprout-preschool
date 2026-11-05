@@ -1,0 +1,65 @@
+/* Little Sprout: Dinding Dokumentasi. Felt boards, white prints, marigold tape, red thread. */
+:root {
+  /* Felt boards (committed colour fields) */
+  --indigo: #1f2a5a;
+  --indigo-deep: #141b40;
+  --night: #0d1230;
+  --green: #0f5a40;
+  --plum: #3d2160;
+  --wall: #e6ebf4;
+  --marigold: #ffc928;
+
+  /* Paper and ink */
+  --paper: #ffffff;
+  --ink: #18213f;
+  --ink-mute: #4a5373;
+  --rule: #d5dbea;
+
+  /* Accents */
+  --tape: #ffc928;
+  --thread: #ff5a36;
+  --sprout: #59d99a;
+
+  /* Board-aware defaults, overridden per [data-board] */
+  --bg: var(--indigo);
+  --fg: #f4f6ff;
+  --fg-mute: #c4cbee;
+  --line: rgb(255 255 255 / 0.18);
+
+  --f-display: 'Bricolage Grotesque Variable', 'Trebuchet MS', system-ui, sans-serif;
+  --f-body: 'Figtree Variable', 'Segoe UI', system-ui, sans-serif;
+  --f-hand: 'Shantell Sans Variable', 'Comic Sans MS', cursive;
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --measure: 66ch;
+  --space-section: clamp(72px, 10vw, 140px);
+
+  --shadow-print: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 24px -6px rgb(0 0 0 / 0.45);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.3), 0 22px 36px -10px rgb(0 0 0 / 0.55);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+
+[data-board='indigo'] { --bg: var(--indigo); }
+[data-board='night'] { --bg: var(--night); }
+[data-board='green'] { --bg: var(--green); --fg-mute: #cdeadb; }
+[data-board='plum'] { --bg: var(--plum); --fg-mute: #e0d2f0; }
+[data-board='teal'] { --bg: #0d5c6b; --fg-mute: #cfe8ec; }
+[data-board='clay'] { --bg: #7a3b22; --fg-mute: #f1dccf; }
+[data-board='wall'] {
+  --bg: var(--wall);
+  --fg: var(--ink);
+  --fg-mute: var(--ink-mute);
+  --line: rgb(24 33 63 / 0.18);
+  --shadow-print: 0 1px 2px rgb(24 33 63 / 0.18), 0 10px 22px -8px rgb(24 33 63 / 0.3);
+  --shadow-lift: 0 2px 4px rgb(24 33 63 / 0.2), 0 20px 32px -10px rgb(24 33 63 / 0.38);
+}
+[data-board='marigold'] {
+  --bg: var(--marigold);
+  --fg: #1b1530;
+  --fg-mute: #3b3250;
+  --line: rgb(27 21 48 / 0.22);
+  --shadow-print: 0 1px 2px rgb(60 40 0 / 0.25), 0 10px 22px -8px rgb(60 40 0 / 0.45);
+  --shadow-lift: 0 2px 4px rgb(60 40 0 / 0.25), 0 20px 32px -10px rgb(60 40 0 / 0.5);
+}

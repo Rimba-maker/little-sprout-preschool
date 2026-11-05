@@ -1,0 +1,19 @@
+---
+import Letters from '../islands/Letters';
+import { photo } from '../../data/photos';
+import { testimonials } from '../../data/content';
+
+const items = testimonials.map((t) => {
+  const p = photo(t.photo);
+  return { quote: t.quote, who: t.who, detail: t.detail, src: p.src, alt: p.alt };
+});
+---
+<section class="board" data-board="marigold" id="cerita" aria-labelledby="testi-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="testi-title">Cerita Dari Para Orangtua</h2>
+    </div>
+    <Letters client:visible items={items} />
+    <p class="letters__foot">Kutipan dan nama keluarga di atas adalah contoh. Sekolah menggantinya dengan testimoni orangtua yang sebenarnya.</p>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import { photo } from '../../data/photos';
+import { teachers } from '../../data/content';
+---
+<section class="board" data-board="plum" id="guru" aria-labelledby="teach-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="teach-title">Tim Guru Kami</h2>
+      <p>Pendidik bersertifikat ECCD (Early Childhood Care &amp; Development), berpengalaman, dan penyayang. Rasio guru-siswa di atas standar industri.</p>
+    </div>
+    <ul class="crew">
+      {teachers.map((t, i) => {
+        const ph = photo(t.photo);
+        return (
+          <li class="badge" data-reveal style={`--i:${i % 4}`}>
+            <img class="badge__photo" src={ph.src} alt={ph.alt} width="700" height="933" loading="lazy" style={t.pos ? `object-position:${t.pos}` : undefined} />
+            <div class="badge__body">
+              <h3>{t.name}</h3>
+              <p class="badge__role">{t.role}</p>
+              <p class="badge__creds">{t.creds}</p>
+              <p class="badge__bio">{t.bio}</p>
+              <div class="badge__langs" aria-label="Bahasa">
+                {t.langs.map((l) => <span class="strip">{l}</span>)}
+              </div>
+            </div>
+          </li>
+        );
+      })}
+      <li class="note crew__note" data-reveal style="--r:1.6deg">
+        <p>Anak punya kebutuhan khusus, seperti speech delay atau sulit beradaptasi? Ms. Lia bekerja bersama guru kelas dan orangtua, sehingga strategi di sekolah dan di rumah sama.</p>
+        <a class="btn btn-ink" href="#booking">Tanya saat campus tour</a>
+      </li>
+    </ul>
+    <p class="teachers__note" data-reveal>Foto dan profil di halaman ini adalah ilustrasi. Sekolah menggantinya dengan foto dan data guru yang sebenarnya.</p>
+  </div>
+</section>

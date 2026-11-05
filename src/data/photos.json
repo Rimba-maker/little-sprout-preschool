@@ -1,0 +1,314 @@
+{
+ "hero-garden": {
+  "file": "/images/hero-garden.jpg",
+  "pexels": 16850733,
+  "alt": "Tiga anak menyiram tanaman di taman sekolah",
+  "src": "https://www.pexels.com/photo/16850733/"
+ },
+ "hero-tower": {
+  "file": "/images/hero-tower.jpg",
+  "pexels": 3662635,
+  "alt": "Balita menyusun menara balok warna-warni",
+  "src": "https://www.pexels.com/photo/3662635/"
+ },
+ "hero-blocks": {
+  "file": "/images/hero-blocks.jpg",
+  "pexels": 5692641,
+  "alt": "Dua anak menyusun balok kayu di lantai",
+  "src": "https://www.pexels.com/photo/5692641/"
+ },
+ "hero-smile": {
+  "file": "/images/hero-smile.jpg",
+  "pexels": 18830333,
+  "alt": "Anak tersenyum di kelas yang cerah",
+  "src": "https://www.pexels.com/photo/18830333/"
+ },
+ "phil-childled": {
+  "file": "/images/phil-childled.jpg",
+  "pexels": 8612967,
+  "alt": "Anak-anak melukis dengan cat air di satu meja",
+  "src": "https://www.pexels.com/photo/8612967/"
+ },
+ "phil-play": {
+  "file": "/images/phil-play.jpg",
+  "pexels": 8535193,
+  "alt": "Balok warna-warni di karpet hijau kelas",
+  "src": "https://www.pexels.com/photo/8535193/"
+ },
+ "phil-whole": {
+  "file": "/images/phil-whole.jpg",
+  "pexels": 8613085,
+  "alt": "Anak-anak memeluk gurunya di kelas",
+  "src": "https://www.pexels.com/photo/8613085/"
+ },
+ "prog-toddler": {
+  "file": "/images/prog-toddler.jpg",
+  "pexels": 27661855,
+  "alt": "Dua balita bermain mobil-mobilan di lantai kelas",
+  "src": "https://www.pexels.com/photo/27661855/"
+ },
+ "prog-nursery": {
+  "file": "/images/prog-nursery.jpg",
+  "pexels": 5063387,
+  "alt": "Anak perempuan bermain dengan balok kayu di ruang bermain",
+  "src": "https://www.pexels.com/photo/5063387/"
+ },
+ "prog-prek": {
+  "file": "/images/prog-prek.jpg",
+  "pexels": 8535214,
+  "alt": "Guru membantu anak melukis dengan cat air",
+  "src": "https://www.pexels.com/photo/8535214/"
+ },
+ "prog-kinder": {
+  "file": "/images/prog-kinder.jpg",
+  "pexels": 8422142,
+  "alt": "Empat anak TK berpose di kelas",
+  "src": "https://www.pexels.com/photo/8422142/"
+ },
+ "curr-reggio": {
+  "file": "/images/curr-reggio.jpg",
+  "pexels": 8382326,
+  "alt": "Anak-anak dan guru di kelas seni dengan easel",
+  "src": "https://www.pexels.com/photo/8382326/"
+ },
+ "curr-montessori": {
+  "file": "/images/curr-montessori.jpg",
+  "pexels": 7269693,
+  "alt": "Material kayu Montessori berupa angka dan balok",
+  "src": "https://www.pexels.com/photo/7269693/"
+ },
+ "curr-play": {
+  "file": "/images/curr-play.jpg",
+  "pexels": 5435599,
+  "alt": "Tangan balita memainkan balok warna-warni",
+  "src": "https://www.pexels.com/photo/5435599/"
+ },
+ "curr-bilingual": {
+  "file": "/images/curr-bilingual.jpg",
+  "pexels": 8087853,
+  "alt": "Guru dan anak-anak prasekolah belajar bersama di meja kuning",
+  "src": "https://www.pexels.com/photo/8087853/"
+ },
+ "curr-mindful": {
+  "file": "/images/curr-mindful.jpg",
+  "pexels": 8613313,
+  "alt": "Anak-anak duduk bermeditasi di atas matras hijau",
+  "src": "https://www.pexels.com/photo/8613313/"
+ },
+ "curr-outdoor": {
+  "file": "/images/curr-outdoor.jpg",
+  "pexels": 6167619,
+  "alt": "Dua anak bermain di alam terbuka",
+  "src": "https://www.pexels.com/photo/6167619/"
+ },
+ "day-welcome": {
+  "file": "/images/day-welcome.jpg",
+  "pexels": 8613318,
+  "alt": "Anak bermain bebas di matras warna-warni",
+  "src": "https://www.pexels.com/photo/8613318/"
+ },
+ "day-circle": {
+  "file": "/images/day-circle.jpg",
+  "pexels": 8613362,
+  "alt": "Guru dan anak yoga di lingkaran pagi",
+  "src": "https://www.pexels.com/photo/8613362/"
+ },
+ "day-project": {
+  "file": "/images/day-project.jpg",
+  "pexels": 33590129,
+  "alt": "Gambar krayon anak dengan matahari dan rumput",
+  "src": "https://www.pexels.com/photo/33590129/"
+ },
+ "day-snack": {
+  "file": "/images/day-snack.jpg",
+  "pexels": 8617547,
+  "alt": "Kotak makan sehat berisi sayur dan buah",
+  "src": "https://www.pexels.com/photo/8617547/"
+ },
+ "day-outdoor": {
+  "file": "/images/day-outdoor.jpg",
+  "pexels": 12586012,
+  "alt": "Kubah panjat di taman bermain",
+  "src": "https://www.pexels.com/photo/12586012/"
+ },
+ "day-lunch": {
+  "file": "/images/day-lunch.jpg",
+  "pexels": 8466773,
+  "alt": "Anak-anak makan siang bersama",
+  "src": "https://www.pexels.com/photo/8466773/"
+ },
+ "day-creative": {
+  "file": "/images/day-creative.jpg",
+  "pexels": 32275007,
+  "alt": "Tangan anak menggambar dengan krayon",
+  "src": "https://www.pexels.com/photo/32275007/"
+ },
+ "teach-linda": {
+  "file": "/images/teach-linda.jpg",
+  "pexels": 7651584,
+  "alt": "Ms. Linda Hartono, Director",
+  "src": "https://www.pexels.com/photo/7651584/"
+ },
+ "teach-sarah": {
+  "file": "/images/teach-sarah.jpg",
+  "pexels": 8537196,
+  "alt": "Ms. Sarah Thompson di kelas",
+  "src": "https://www.pexels.com/photo/8537196/"
+ },
+ "teach-putri": {
+  "file": "/images/teach-putri.jpg",
+  "pexels": 4272299,
+  "alt": "Ms. Putri Wulandari",
+  "src": "https://www.pexels.com/photo/4272299/"
+ },
+ "teach-maya": {
+  "file": "/images/teach-maya.jpg",
+  "pexels": 8837463,
+  "alt": "Ms. Maya Rachmawati",
+  "src": "https://www.pexels.com/photo/8837463/"
+ },
+ "teach-reza": {
+  "file": "/images/teach-reza.jpg",
+  "pexels": 3761521,
+  "alt": "Pak Reza Kurniawan",
+  "src": "https://www.pexels.com/photo/3761521/"
+ },
+ "teach-fatma": {
+  "file": "/images/teach-fatma.jpg",
+  "pexels": 5125324,
+  "alt": "Ms. Fatma Anggraeni",
+  "src": "https://www.pexels.com/photo/5125324/"
+ },
+ "teach-bayu": {
+  "file": "/images/teach-bayu.jpg",
+  "pexels": 9761037,
+  "alt": "Pak Bayu Pratama",
+  "src": "https://www.pexels.com/photo/9761037/"
+ },
+ "teach-lia": {
+  "file": "/images/teach-lia.jpg",
+  "pexels": 8070478,
+  "alt": "Ms. Lia Indriani",
+  "src": "https://www.pexels.com/photo/8070478/"
+ },
+ "fac-class": {
+  "file": "/images/fac-class.jpg",
+  "pexels": 8363102,
+  "alt": "Ruang kelas yang terang dengan meja warna-warni",
+  "src": "https://www.pexels.com/photo/8363102/"
+ },
+ "fac-play": {
+  "file": "/images/fac-play.jpg",
+  "pexels": 5488873,
+  "alt": "Anak menjelajah jaring tali di area bermain",
+  "src": "https://www.pexels.com/photo/5488873/"
+ },
+ "fac-art": {
+  "file": "/images/fac-art.jpg",
+  "pexels": 7025515,
+  "alt": "Anak menggambar di meja penuh pensil warna",
+  "src": "https://www.pexels.com/photo/7025515/"
+ },
+ "fac-music": {
+  "file": "/images/fac-music.jpg",
+  "pexels": 8363027,
+  "alt": "Anak-anak mengelilingi guru di depan piano",
+  "src": "https://www.pexels.com/photo/8363027/"
+ },
+ "fac-library": {
+  "file": "/images/fac-library.jpg",
+  "pexels": 8466915,
+  "alt": "Anak-anak membaca buku bersama di bangku pojok baca",
+  "src": "https://www.pexels.com/photo/8466915/"
+ },
+ "fac-dining": {
+  "file": "/images/fac-dining.jpg",
+  "pexels": 8466771,
+  "alt": "Anak-anak makan di ruang makan yang cerah",
+  "src": "https://www.pexels.com/photo/8466771/"
+ },
+ "fam-sari": {
+  "file": "/images/fam-sari.jpg",
+  "pexels": 7705369,
+  "alt": "Orangtua memeluk anak mereka",
+  "src": "https://www.pexels.com/photo/7705369/"
+ },
+ "fam-hartanto": {
+  "file": "/images/fam-hartanto.jpg",
+  "pexels": 8297589,
+  "alt": "Keluarga berempat berpelukan di depan rumah",
+  "src": "https://www.pexels.com/photo/8297589/"
+ },
+ "fam-thompson": {
+  "file": "/images/fam-thompson.jpg",
+  "pexels": 4874921,
+  "alt": "Pasangan expat bersama putri kecil mereka",
+  "src": "https://www.pexels.com/photo/4874921/"
+ },
+ "fam-maya": {
+  "file": "/images/fam-maya.jpg",
+  "pexels": 5094100,
+  "alt": "Ibu dan anak membaca bersama",
+  "src": "https://www.pexels.com/photo/5094100/"
+ },
+ "tour-open": {
+  "file": "/images/tour-open.jpg",
+  "pexels": 15162755,
+  "alt": "Anak-anak berpose ceria di acara sekolah",
+  "src": "https://www.pexels.com/photo/15162755/"
+ },
+ "mom-1": {
+  "file": "/images/mom-1.jpg",
+  "pexels": 7301376,
+  "alt": "Balita menyusun balok kayu setinggi badannya",
+  "src": "https://www.pexels.com/photo/7301376/"
+ },
+ "mom-2": {
+  "file": "/images/mom-2.jpg",
+  "pexels": 19230314,
+  "alt": "Anak memanjat dinding panjat",
+  "src": "https://www.pexels.com/photo/19230314/"
+ },
+ "mom-3": {
+  "file": "/images/mom-3.jpg",
+  "pexels": 8190048,
+  "alt": "Anak bermain ukulele",
+  "src": "https://www.pexels.com/photo/8190048/"
+ },
+ "mom-4": {
+  "file": "/images/mom-4.jpg",
+  "pexels": 9872291,
+  "alt": "Anak menggambar keluarganya",
+  "src": "https://www.pexels.com/photo/9872291/"
+ },
+ "mom-5": {
+  "file": "/images/mom-5.jpg",
+  "pexels": 3933039,
+  "alt": "Balita memegang balok kayu",
+  "src": "https://www.pexels.com/photo/3933039/"
+ },
+ "mom-6": {
+  "file": "/images/mom-6.jpg",
+  "pexels": 7269673,
+  "alt": "Anak berhitung dengan mainan kayu berangka",
+  "src": "https://www.pexels.com/photo/7269673/"
+ },
+ "mom-7": {
+  "file": "/images/mom-7.jpg",
+  "pexels": 7521069,
+  "alt": "Pria dan anak bermain gitar",
+  "src": "https://www.pexels.com/photo/7521069/"
+ },
+ "mom-8": {
+  "file": "/images/mom-8.jpg",
+  "pexels": 10638095,
+  "alt": "Anak-anak berseragam duduk berdekatan",
+  "src": "https://www.pexels.com/photo/10638095/"
+ },
+ "tour-private": {
+  "file": "/images/tour-private.jpg",
+  "pexels": 4172987,
+  "alt": "Guru dan dua anak melukis di meja bundar yang terang",
+  "src": "https://www.pexels.com/photo/4172987/"
+ }
+}

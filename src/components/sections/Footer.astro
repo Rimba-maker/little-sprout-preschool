@@ -1,0 +1,59 @@
+---
+import Logo from '../ui/Logo.astro';
+import Icon from '../ui/Icon.astro';
+import { branches } from '../../data/content';
+---
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a href="#top" class="brand"><Logo /><span>Little Sprout</span></a>
+        <p class="footer__tag">“Where childhood is celebrated, every day.”</p>
+        <div class="socials">
+          <a href="https://instagram.com/littlesprout.id" aria-label="Instagram @littlesprout.id" target="_blank" rel="noopener"><Icon name="instagram" /></a>
+          <a href="https://youtube.com/" aria-label="YouTube, parenting tips" target="_blank" rel="noopener"><Icon name="youtube" /></a>
+          <a href="https://wa.me/" aria-label="WhatsApp admission" target="_blank" rel="noopener"><Icon name="whatsapp" /></a>
+        </div>
+      </div>
+      <div>
+        <h3>Cabang</h3>
+        <ul>{branches.map((b) => <li><a href={`tel:${b.tel}`}>{b.name}</a></li>)}</ul>
+      </div>
+      <div>
+        <h3>Jelajahi</h3>
+        <ul>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#kurikulum">Kurikulum</a></li>
+          <li><a href="#guru">Tim Guru</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#biaya">Biaya</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <ul><li><a href="mailto:hello@littlesprout.id">hello@littlesprout.id</a></li></ul>
+        <p class="footer__hours">Senin–Jumat 08:00–17:00 (admin)<br />Sabtu 09:00–13:00 (admission)</p>
+      </div>
+    </div>
+
+    <div class="news">
+      <div>
+        <h3>Monthly parenting tips</h3>
+        <p>Tips parenting dan jadwal open house, satu email per bulan.</p>
+      </div>
+      <form name="newsletter" method="POST" data-netlify="true" data-ajax-form aria-label="Berlangganan newsletter">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <label class="sr-only" for="news-email">Email</label>
+        <input id="news-email" type="email" name="email" placeholder="nama@email.com" autocomplete="email" required />
+        <button class="btn btn-primary" type="submit">Berlangganan</button>
+        <p class="sr-only" role="status" data-form-status></p>
+      </form>
+    </div>
+
+    <div class="footer__legal">
+      <p>© 2026 Little Sprout Preschool · Akreditasi A Kemendikbud · member IECA (International Early Childhood Association)</p>
+      <nav aria-label="Legal"><a href="#">Kebijakan Privasi</a><a href="#">Syarat &amp; Ketentuan</a></nav>
+    </div>
+    <p class="footer__credit">Foto: Pexels (Pexels License). Daftar sumber ada di src/data/photos.json. Akreditasi, keanggotaan, nomor telepon, dan data cabang adalah contoh sampai diganti data resmi sekolah.</p>
+  </div>
+</footer>
