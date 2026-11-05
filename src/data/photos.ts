@@ -12,5 +12,5 @@ export interface Photo {
 /** Resolve a photo key to its file, alt text, and Pexels origin. */
 export function photo(key: PhotoKey): Photo {
   const p = manifest[key];
-  return { src: p.file, alt: p.alt, origin: p.src };
+  return { src: import.meta.env.BASE_URL.replace(/\/$/, '') + p.file, alt: p.alt, origin: p.src };
 }
