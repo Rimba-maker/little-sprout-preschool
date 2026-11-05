@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#ff385c"/>
-  <text x="16" y="22" font-size="18" text-anchor="middle" fill="white">🌱</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="5" fill="#ffc928"/><path d="M20 31V19" stroke="#18213f" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M20 21c0-5-3.5-8-9-8 0 5 3.5 8 9 8z" fill="#0f5a40"/><path d="M20 18c0-4.5 3-7.5 9-7.5 0 4.8-3 7.5-9 7.5z" fill="#18213f"/></svg>

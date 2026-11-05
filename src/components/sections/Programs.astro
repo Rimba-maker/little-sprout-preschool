@@ -1,0 +1,34 @@
+---
+import Icon from '../ui/Icon.astro';
+import { photo } from '../../data/photos';
+import { programs } from '../../data/content';
+---
+<section class="board" data-board="green" id="program" aria-labelledby="prog-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="prog-title">Program Sesuai Usia</h2>
+      <p>Setiap kelas dirancang untuk milestone tumbuh kembang spesifik.</p>
+    </div>
+    <div class="sheets">
+      {programs.map((p, i) => {
+        const ph = photo(p.photo);
+        return (
+          <article class="sheet" data-reveal style={`--i:${i}`}>
+            <img src={ph.src} alt={ph.alt} width="1000" height="750" loading="lazy" />
+            <h3>{p.name}</h3>
+            <p class="sheet__age">Usia {p.age} <span class="strip strip--tape">Rasio guru {p.ratio}</span></p>
+            <ul class="sheet__list">
+              <li><b>Jam</b>{p.hours}</li>
+              <li><b>Fokus</b>{p.focus}</li>
+              <li><b>Hari</b>{p.days}</li>
+            </ul>
+            <p class="sheet__price">{p.price} <small>/ bulan</small></p>
+          </article>
+        );
+      })}
+    </div>
+    <p class="programs__more" data-reveal>
+      <a class="btn btn-ghost" href="#biaya">Lihat rincian biaya <Icon name="arrow" /></a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import BookingForm from '../islands/BookingForm';
+import { bookingOptions } from '../../data/content';
+const fields = ['parent-name', 'whatsapp', 'email', 'child-name', 'child-age', 'program', 'branch', 'visit-type', 'preferred-date'];
+---
+<section class="board" data-board="indigo" id="booking" aria-labelledby="booking-title">
+  <div class="wrap">
+    <div class="booking__grid">
+      <div>
+        <h2 id="booking-title" style="font-size:clamp(2.2rem,5vw,4rem)" data-reveal>Mulai Perjalanan Little Sprout</h2>
+        <p class="booking__lede" data-reveal style="--i:1">Schedule campus tour atau daftar open house bulanan. Tim admission akan response dalam 1 hari kerja.</p>
+        <ul class="perks">
+          <li data-reveal><p class="note">Campus tour gratis, tanpa kewajiban mendaftar.</p></li>
+          <li data-reveal style="--i:1"><p class="note">1 day trial setelah tour, anak boleh ikut kelas.</p></li>
+          <li data-reveal style="--i:2"><p class="note">Deposit 50% untuk hold spot sampai 6 bulan.</p></li>
+        </ul>
+      </div>
+      <div data-reveal style="--i:1">
+        <BookingForm client:idle programs={bookingOptions.programs} branches={bookingOptions.branches} visits={bookingOptions.visits} />
+      </div>
+    </div>
+  </div>
+  <!-- Static twin so Netlify registers the form fields at build time. The React form posts to it. -->
+  <form name="campus-tour-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    {fields.map((f) => <input name={f} />)}
+  </form>
+</section>

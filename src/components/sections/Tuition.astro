@@ -1,0 +1,52 @@
+---
+import Icon from '../ui/Icon.astro';
+import { tuition } from '../../data/content';
+---
+<section class="board" data-board="green" id="biaya" aria-labelledby="tuition-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="tuition-title">Biaya Pendidikan</h2>
+      <p>Transparent pricing. Tidak ada hidden fee.</p>
+    </div>
+    <div class="tuition__grid">
+      <div class="paper tuition__sheet" data-reveal>
+        <table class="sheet-table">
+          <caption>Biaya per program</caption>
+          <thead>
+            <tr><th scope="col">Program</th><th scope="col" class="num">Bulanan</th><th scope="col" class="num">Annual (hemat 10%)</th></tr>
+          </thead>
+          <tbody>
+            {tuition.monthly.map((r) => (
+              <tr><th scope="row">{r.program}</th><td class="num big">{r.month}</td><td class="num">{r.year}</td></tr>
+            ))}
+          </tbody>
+        </table>
+        <table class="sheet-table">
+          <caption>One-time fee (per tahun ajaran)</caption>
+          <tbody>
+            {tuition.oneTime.map((r) => (
+              <tr><th scope="row">{r.item}</th><td class="num big">{r.price}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tuition__side">
+        <div class="note" style="--r:-1deg" data-reveal>
+          <h3>Termasuk</h3>
+          <ul class="tick-list">
+            {tuition.included.map((t) => <li><Icon name="check" />{t}</li>)}
+          </ul>
+        </div>
+        <div class="paper" data-reveal style="--i:1">
+          <h3>Tidak termasuk</h3>
+          <ul class="tick-list tick-list--no">
+            {tuition.excluded.map((t) => <li><Icon name="cross" />{t}</li>)}
+          </ul>
+        </div>
+        <p class="strip strip--tape tuition__sibling" data-reveal>{tuition.sibling}</p>
+        <a class="btn btn-primary" href="#booking" data-reveal>Schedule Campus Tour Gratis <Icon name="arrow" /></a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+import Icon from '../ui/Icon.astro';
+import { photo } from '../../data/photos';
+import { tour } from '../../data/content';
+---
+<section class="board" data-board="night" id="tour" aria-labelledby="tour-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="tour-title">{tour.title}</h2>
+      <p>{tour.body}</p>
+    </div>
+    <div class="tickets">
+      {tour.options.map((o, i) => {
+        const ph = photo(o.photo);
+        return (
+          <article class="ticket" data-reveal style={`--i:${i}`}>
+            <img src={ph.src} alt={ph.alt} width="1200" height="800" loading="lazy" />
+            <div class="ticket__body">
+              <h3>{o.title}</h3>
+              <ul class="tick-list">
+                {o.points.map((p) => <li><Icon name="check" />{p}</li>)}
+              </ul>
+              <a class="btn btn-ink" href="#booking" data-visit={o.visit}>{o.cta} <Icon name="arrow" /></a>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import DayThread from '../islands/DayThread';
+import { photo } from '../../data/photos';
+import { schedule } from '../../data/content';
+---
+<section class="board" data-board="night" id="sehari" aria-labelledby="day-title">
+  <div class="wrap">
+    <div class="board-head" data-reveal>
+      <h2 id="day-title">Sehari Di Little Sprout</h2>
+      <p>Jadwal yang dirancang dengan ritme anak, bukan jadwal kantor.</p>
+    </div>
+    <div class="day__wrap" id="day-list">
+    <div class="day__thread" aria-hidden="true"><DayThread client:visible targetId="day-list" /></div>
+    <ol class="day__list">
+      {schedule.map((s, i) => {
+        const ph = s.photo ? photo(s.photo) : null;
+        return (
+          <li class="day__item">
+            <div class="day__card" data-reveal>
+              <span class="day__time">{s.time}</span>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </div>
+            <span class="day__pin" aria-hidden="true"></span>
+            {ph && (
+              <figure class="print day__media" data-tape data-reveal style={`--r:${i % 2 ? 2.2 : -2.2}deg`}>
+                <img src={ph.src} alt={ph.alt} width="1000" height="750" loading="lazy" style="--ar:4/3" />
+              </figure>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+    </div>
+  </div>
+</section>

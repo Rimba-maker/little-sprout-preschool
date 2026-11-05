@@ -1,0 +1,33 @@
+---
+import { photo } from '../../data/photos';
+import { philosophy } from '../../data/content';
+const cls = ['panel--a', 'panel--b', 'panel--c'];
+---
+<section class="board" data-board="indigo" id="filosofi" aria-labelledby="philo-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="philo__intro">
+      <div data-reveal>
+        <h2 id="philo-title">{philosophy.title}</h2>
+        <p class="note philo__note" style="--r:-2deg">Catatan guru, Selasa pagi: “Hari ini Aira bertanya kenapa bayangan ikut berjalan.”<cite>Contoh catatan dokumentasi</cite></p>
+      </div>
+      <div class="paper philo__body" data-reveal style="--i:1">
+        {philosophy.body.map((t) => <p>{t}</p>)}
+      </div>
+    </div>
+    <div class="panels">
+      {philosophy.principles.map((p, i) => {
+        const ph = photo(p.photo);
+        return (
+          <article class:list={['panel', cls[i]]} data-reveal style={`--i:${i}`}>
+            <img src={ph.src} alt={ph.alt} width="1200" height="900" loading="lazy" />
+            <div class="panel__body">
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+              <p class="panel__note">{p.note}</p>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>

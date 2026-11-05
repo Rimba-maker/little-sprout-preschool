@@ -1,0 +1,173 @@
+/* Shared pieces of the documentation wall. */
+
+/* Board: a felt colour field. Texture is procedural, never an image file. */
+.board {
+  position: relative;
+  background-color: var(--bg);
+  color: var(--fg);
+  padding-block: var(--space-section);
+  isolation: isolate;
+}
+.board::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.95;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(115deg, rgb(255 255 255 / 0.05) 0 1px, transparent 1px 3px), repeating-linear-gradient(25deg, rgb(0 0 0 / 0.07) 0 1px, transparent 1px 4px), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.6 -.15'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+[data-board='wall']::before { opacity: 0.22; }
+[data-board='marigold']::before { opacity: 0.3; }
+
+.board-head { max-width: 46rem; margin-bottom: clamp(36px, 5vw, 64px); }
+.board-head h2 { font-size: clamp(2.1rem, 4.6vw, 3.7rem); }
+.board-head p { margin-top: 1.1rem; color: var(--fg-mute); font-size: 1.15rem; max-width: 52ch; }
+
+/* Print: a photo mounted on white paper, pinned or taped. */
+.print {
+  position: relative;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  padding: clamp(6px, 1.2vw, 12px);
+  box-shadow: var(--shadow-print);
+  rotate: var(--r, 0deg);
+  transition: rotate 0.5s var(--ease-out), translate 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+}
+.print img { width: 100%; object-fit: cover; aspect-ratio: var(--ar, 4 / 3); object-position: var(--pos, center); }
+.print figcaption { padding: 10px 4px 4px; font-family: var(--f-hand); font-size: 0.95rem; line-height: 1.3; color: var(--ink-mute); }
+.print:hover, .print:focus-within { rotate: 0deg; translate: 0 -4px; box-shadow: var(--shadow-lift); }
+.print[data-tape]::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: clamp(54px, 28%, 92px);
+  height: 24px;
+  translate: -50% 0;
+  rotate: var(--tape-r, -3deg);
+  background: color-mix(in srgb, var(--tape) 88%, transparent);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.18);
+  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+}
+.print[data-pin]::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff9078 0 18%, var(--thread) 42%, #b9341b 100%);
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.4);
+  z-index: 2;
+}
+
+/* Paper: reading plate. Prose always sits here, so contrast never depends on felt. */
+.paper {
+  background: var(--paper);
+  color: var(--ink);
+  padding: clamp(20px, 3vw, 36px);
+  box-shadow: var(--shadow-print);
+}
+.paper p { color: var(--ink-mute); }
+
+/* Label-printer strip: ratios, times, languages. */
+.strip {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.5em 0.75em;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
+  white-space: nowrap;
+}
+.strip--tape { background: var(--tape); color: var(--ink); box-shadow: none; }
+.strip--light { background: #fff; color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 0.2); }
+
+/* Note: a sticky card in teacher or child handwriting. */
+.note {
+  position: relative;
+  background: var(--tape);
+  color: #20180a;
+  font-family: var(--f-hand);
+  font-weight: 500;
+  padding: clamp(18px, 2.4vw, 28px);
+  box-shadow: var(--shadow-print);
+  rotate: var(--r, -1.5deg);
+}
+.note cite { display: block; margin-top: 0.9rem; font-style: normal; font-family: var(--f-body); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 52px;
+  padding: 0.85rem 1.5rem;
+  border: 0;
+  border-radius: 6px;
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  line-height: 1.25;
+  transition: translate 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), background-color 0.2s;
+}
+.btn svg { width: 1.15em; height: 1.15em; transition: translate 0.25s var(--ease-out); }
+.btn:hover svg { translate: 4px 0; }
+.btn-primary { background: var(--tape); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 0.25), 0 8px 18px -6px rgb(0 0 0 / 0.45); }
+.btn-primary:hover { translate: 0 -2px; background: #ffd24f; }
+.btn-primary:active { translate: 0 0; }
+.btn-ghost { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 2px currentColor; }
+.btn-ghost:hover { background: rgb(255 255 255 / 0.1); }
+[data-board='wall'] .btn-ghost:hover, [data-board='marigold'] .btn-ghost:hover { background: rgb(24 33 63 / 0.08); }
+.btn-ink { background: var(--ink); color: #fff; }
+.btn-ink:hover { translate: 0 -2px; background: #232e58; }
+.btn[disabled] { opacity: 0.55; cursor: not-allowed; translate: 0 0; }
+
+.icon { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Reveal: visible by default; only hidden when JS is present to bring it in. */
+.js [data-reveal]:not(.is-in) { opacity: 0; translate: 0 26px; }
+[data-reveal] { transition: opacity 0.8s var(--ease-out), translate 0.8s var(--ease-out), rotate 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out); transition-delay: calc(var(--i, 0) * 90ms); }
+.js .print[data-reveal]:not(.is-in) { translate: 0 -22px; opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal]:not(.is-in) { opacity: 1; translate: 0 0; }
+}
+
+/* Every mounted card carries tape, every third a pin. */
+:is(.sheet, .index__item, .badge, .fac, .panel, .ticket) { position: relative; }
+:is(.sheet, .index__item, .badge, .fac, .panel, .ticket)::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: clamp(54px, 24%, 86px);
+  height: 24px;
+  translate: -50% 0;
+  rotate: -3deg;
+  z-index: 2;
+  background: color-mix(in srgb, var(--tape) 88%, transparent);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+  pointer-events: none;
+}
+:is(.sheet, .index__item, .badge, .fac, .panel, .ticket):nth-child(3n + 2)::before {
+  width: 18px; height: 18px; top: -9px; rotate: 0deg; clip-path: none; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff9078 0 18%, var(--thread) 42%, #b9341b 100%);
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.4);
+}
+.page-thread { position: fixed; top: 0; right: 2px; width: 12px; height: 100vh; z-index: 50; pointer-events: none; }
+@media (min-width: 700px) { .page-thread { right: 6px; width: 18px; } }
+@media (min-width: 1360px) { .page-thread { right: 14px; width: 24px; } }

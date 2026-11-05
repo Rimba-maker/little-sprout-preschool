@@ -1,0 +1,26 @@
+---
+import Logo from '../ui/Logo.astro';
+import Icon from '../ui/Icon.astro';
+import { nav } from '../../data/content';
+---
+<header class="nav" id="navbar" data-open="false">
+  <div class="wrap nav__bar">
+    <a href="#top" class="brand" aria-label="Little Sprout Preschool, ke atas">
+      <Logo />
+      <span>Little Sprout</span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Buka menu">
+      <Icon name="menu" class="i-menu" />
+      <Icon name="close" class="i-close" />
+    </button>
+    <a href="#booking" class="btn btn-primary nav__cta-mobile">Book Tour</a>
+    <div class="nav__panel" id="nav-panel">
+      <nav aria-label="Utama">
+        <ul class="nav__links">
+          {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+        </ul>
+      </nav>
+      <a href="#booking" class="btn btn-primary nav__cta">Book Campus Tour</a>
+    </div>
+  </div>
+</header>
